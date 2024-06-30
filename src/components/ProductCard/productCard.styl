@@ -1,4 +1,11 @@
-.card
-    background: rgba(217, 217, 217, 1)
-    width 17vw
-    height: 48vh
+.card {
+    background: rgba(217, 217, 217, 1);
+    width: 17vw;
+    height: 48vh;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
