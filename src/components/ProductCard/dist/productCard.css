@@ -1,10 +1,126 @@
 .card {
-  background: #d9d9d9;
+  background: #fff;
   width: 17vw;
-  height: 48vh;
-  transition: transform 0.3s ease, z-index 0.3s ease;
+  height: 60vh;
+  border-radius: 0.5vh;
+  transition: 0.3s ease;
+  position: relative;
+  padding: 1.2vh 1.2vh;
+  box-sizing: border-box;
 }
 .card:hover {
-  transform: scale(1.1);
-  z-index: 10;
+  box-shadow: 0 0.4vh 2vh rgba(0,0,0,0.25);
+}
+.articule {
+  margin: 0;
+  font-family: Inter;
+  font-size: 1.2vh;
+  font-weight: 400;
+  color: #717171;
+}
+.img_con {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+}
+.product___name {
+  margin-top: 2vh;
+  font-family: Jura;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+.bot_con {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+.sale {
+  position: relative;
+  font-family: Jura;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.66px;
+  color: #717171;
+}
+.sale:after {
+  top: 1.4vh;
+  left: -0.1vw;
+  content: "";
+  width: 3vw;
+  position: absolute;
+  height: 0.1vh;
+  background: #717171;
+}
+.price {
+  font-family: Jura;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.39px;
+  color: #000;
+}
+.card:hover .price_con {
+  display: flex;
+  gap: 0.8vw;
+}
+.card:hover .price {
+  order: 1;
+}
+.card:hover .sale {
+  order: 2;
+}
+.add_to_cart {
+  display: flex;
+  width: 50%;
+  height: 7vh;
+  background: #ebebeb;
+  border-radius: 0.5vh;
+  overflow: hidden;
+}
+.p_counter {
+  height: 100%;
+  width: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+.p_counter div {
+  font-family: Jura;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.39px;
+  text-align: center;
+}
+.minus {
+  cursor: pointer;
+}
+.plus {
+  cursor: pointer;
+}
+.cart_btn {
+  background: #85d4a9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Jura;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.66px;
+  text-align: center;
+}
+.card:hover .bot_con {
+  flex-direction: column;
+}
+.card:hover .add_to_cart {
+  margin-top: 2vh;
+  width: 100%;
+}
+.card:hover .p_counter {
+  width: 50%;
+}
+.card:hover .cart_btn {
+  width: 50%;
 }
