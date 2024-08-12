@@ -1,0 +1,49 @@
+.news_car {
+  background: #fff;
+  width: 29vw;
+  height: 55vh;
+}
+.news_img {
+  width: 100%;
+  user-select: none;
+}
+.news_title {
+  font-family: Jura;
+  font-size: 2.4vh;
+  font-weight: 700;
+}
+.news_bot {
+  padding: 1vh 1vw;
+  box-sizing: border-box;
+}
+.news_text {
+  margin-top: 1vh;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 400;
+}
+.brn_date_con {
+  display: flex;
+  height: 9vh;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.read_more {
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 500;
+  background: #85d4a9;
+  border-radius: 0.5vh;
+  height: 6vh;
+  width: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news_date {
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 400;
+  color: #000;
+}

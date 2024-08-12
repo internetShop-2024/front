@@ -1,20 +1,20 @@
 import React from "react";
-
-
-import "./dist/main.css"
-import { NavBar } from "../../components/NavBar/navBar";
+import "./dist/main.css";
 import { ProductCard } from "../../components/ProductCard/productCard";
 import { Footer } from "../../components/Footer/footer";
+import { NewsCard } from "../../components/NewsCard/newsCard";
+import { useGetProductsQuery } from "../../store/productApi";
 
-export function Main(){
-    return(
+export function Main() {
+    const { data = { products: [] }, isLoading } = useGetProductsQuery();
+
+    return (
         <div>
-            <NavBar/>
             <div className="main">
                 <div className="carousel_block">
-                    <img className="img_banner" src="./img/banner.jpg" alt="" />
+                    <img className="img_banner" src="./img/banner.jpg" alt="Banner" />
                     <div className="gradient">
-                        <div class="banner_heading">
+                        <div className="banner_heading">
                             Найкращі
                             <span>пропозиції цього сезону</span>
                         </div>
@@ -27,36 +27,36 @@ export function Main(){
                     <div className="sort">Знижка</div>
                 </div>
                 <div className="product_block">
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-
+                    {isLoading ? (
+                        <p>Loading...</p>
+                    ) : data.products.length ? (
+                        data.products.map(product => (
+                            <ProductCard key={product.id} product={product} />
+                        ))
+                    ) : (
+                        <p>No products available.</p>
+                    )}
                 </div>
                 <div className="action_btn_con">
                     <div className="action_btn">
                         <p>ЗАВАНТАЖИТИ ЩЕ</p>
                     </div>
                 </div>
+                <div className="post_heading">
+                    <p>НАШІ ПОСТИ</p>
+                </div>
                 <div className="news_block">
-                    <div className="news"></div>
-                    <div className="news"></div>
-                    <div className="news"></div>
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
                 </div>
                 <div className="action_btn_con">
                     <div className="action_btn">
-                        
+                        {/* Additional content can be added here */}
                     </div>
                 </div>
-                <div className="big_block"></div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
-    )
+    );
 }

@@ -7,6 +7,7 @@
     padding 0 4vw 0 4vw
     box-sizing: border-box
     align-items: center
+    position: relative;
 .logo
     width 9vh
     height: 9vh
@@ -15,12 +16,11 @@
     margin: 0 1.5vw 0 0
     
 .link
+    text-transform: uppercase;
     margin-left: 1vw
     font-family: Jura;
-    font-size: 20px;
+    font-size: 2.2vh;
     font-weight: 400;
-    line-height: 23.66px;
-    text-align: left;
     cursor pointer
 
 .top_nav
@@ -49,6 +49,7 @@
     display: flex
     gap 2vw
 .social
+    width 2vh
     cursor pointer
 .catalog
     cursor: pointer
@@ -60,14 +61,14 @@
     width 10.9vw
     height: 6.8vh
     font-family: Jura;
-    font-size: 20px;
+    font-size: 2.4vh;
     font-weight: 700;
-    line-height: 23.66px;
 
 .search_con
     position relative
 
 .search
+    font-size: 2vh
     border: none
     outline: none
     border-radius: 0.5vh
@@ -77,23 +78,26 @@
     box-sizing: border-box
     padding-left: 3vw 
 .s_img
+    width 3.6vh
     position absolute
     top 1.5vh
     left 1vw
 .sign_in
+    text-decoration: none
+    color black
     display: flex
     justify-content: center
     align-items: center
     font-family: Jura;
-    font-size: 20px;
+    font-size: 2vh;
     font-weight: 700;
-    line-height: 23.66px;
     cursor: pointer
     border-radius: 0.5vh
     width 10.9vw
     height: 6.8vh
     background: rgba(133, 212, 169, 1)
 .cart
+    position: relative
     display: flex
     justify-content: center
     align-items: center
@@ -102,3 +106,23 @@
     height: 6.8vh
     width 4.3vw
     background: rgba(133, 212, 169, 1)
+.cart img 
+    width 3vh
+.cart_counter
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top 1.4vh
+    right: 1vw
+    width 2vh
+    height: 2vh
+    border-radius: 50%
+    background: rgb(255, 255, 255)
+    font-family: Jura;
+    font-size: 2vh;
+    font-weight: 700;
+
+.b_left_nav a
+    text-decoration: none
+    color black

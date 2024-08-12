@@ -1,0 +1,122 @@
+.cart_component {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.267);
+  transition: 0.3s ease;
+  z-index: 4;
+  display: none;
+  justify-content: flex-end;
+  opacity: 0;
+}
+.cart_container {
+  width: 41vw;
+  height: 100%;
+  background: #f3f3f3;
+  transition: 0.3s ease;
+}
+.cart_header {
+  width: 100%;
+  height: 8vh;
+  background: #85d4a9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.7vw;
+  box-sizing: border-box;
+}
+.heading {
+  font-family: Jura;
+  font-size: 2.4vh;
+  font-weight: 700;
+}
+.delete_cart {
+  cursor: pointer;
+  font-family: Jura;
+  font-size: 2.4vh;
+  font-weight: 700;
+}
+.product_cart_list {
+  padding: 3vh 1vw 0 1vw;
+  height: 40vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  width: 100%;
+}
+.cart_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 12.2vh;
+  width: 100%;
+  background: #fff;
+  padding: 0 2.2vw 0 2.2vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cart_footer {
+  text-decoration: none;
+  color: #000;
+}
+.cart_body {
+  height: 81vh;
+  overflow-y: scroll;
+  padding: 0 0 20vh 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart_body::-webkit-scrollbar {
+  display: none;
+}
+.price_sum {
+  width: 8vw;
+  font-family: Jura;
+  font-size: 2.2vh;
+  font-weight: 500;
+}
+.back_to_shop {
+  cursor: pointer;
+  background: #d48585;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vh;
+  height: 6.8vh;
+  width: 13vw;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 700;
+}
+.make_an_order {
+  cursor: pointer;
+  background: #85d4a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vh;
+  height: 6.8vh;
+  width: 13vw;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 700;
+}
+.product_cart_list::-webkit-scrollbar {
+  display: none;
+}
+.sep_cart_line {
+  margin-top: 2vh;
+  background: #85d4a9;
+  width: 80%;
+  height: 0.2vh;
+}
+.special {
+  margin-top: 2vh;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 600;
+}

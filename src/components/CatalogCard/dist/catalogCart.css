@@ -1,0 +1,20 @@
+.catalog_card {
+  cursor: pointer;
+  user-select: none;
+  width: 573px;
+  height: 441px;
+  border-radius: 1vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+.catalog_name {
+  font-family: Jura;
+  font-size: 4vh;
+  font-weight: 700;
+  margin: 0;
+}

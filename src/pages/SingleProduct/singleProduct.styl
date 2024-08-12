@@ -1,72 +1,201 @@
+.single_product
+    background: rgba(243, 243, 243, 1)
+
+
 .about_product
     display: flex
-    gap 1.9vh
+    justify-content: center
+    gap 5vw
+.carousel_con
+    user-select: none
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
 .product_view
-    background: rgba(217, 217, 217, 1)
-    width 55vw
-    height: 82vh
+    background: rgba(255, 255, 255, 1)
+    width 49vw
+    height: 60vh
+    align-items: center
+    overflow: hidden
+.img_section
+    min-width 49vw
+    height: 60vh
+    display: flex
+    justify-content: center
+    align-items: center
+.imgs_con
+    transition: 0.3s
+    display: flex
+    transform: translateX(0vw)
+.carousel_controls
+    display: flex
+    justify-content: center
+    align-items: center
+.carousel_btn
+    cursor: pointer
 .single_product_page
-    padding: 5vh 3.6vw
+    padding: 6vh 0 0 0vw
     box-sizing: border-box
+.product_article
+    color rgba(0, 0, 0, 1)
+    font-family: Rubik;
+    font-size: 1.7vh;
+    font-weight: 300;
 .product_name
-    background: rgba(194, 194, 194, 1)
-    width 36vw
-    height: 8.7vh
-    margin-bottom: 7vh
+    margin-top 5vh
+    font-family: Jura;
+    font-size: 3.6vh;
+    font-weight: 700;
+    text-align: left;
+    width 25vw
+.add_to_favorite
+    margin-top 2vh
+    user-select: none
+    cursor pointer
+    display: flex
+    justify-content: space-around
+    align-items: center
+    font-family: Jura;
+    font-size: 2.4vh;
+    font-weight: 500;
+    line-height: 28.39px;
+    text-align: center;
+    background: rgba(255, 255, 255, 1)
+    width 15.7vw
+    height: 5.5vh
+    border-radius: 1vh
+.star
+    width 1.7vw
+
+
 .product_info
     display: flex
     justify-content: space-between
     flex-direction: column
-.short_description
+    height: 60vh
+
+.product_counter
+    user-select none
+    background: rgba(255, 255, 255, 1)
+    width 8vw
+    height: 7vh
+    margin 6vh 0 0 0
+    border-radius: 1vh
+    display: flex
+    justify-content: space-around
+    align-items: center
+.counter_control
+    width 2vw
+    text-align: center
+    cursor pointer
+    font-family: Jura;
+    font-size: 2.4vh;
+    font-weight: 500;
+.count_p
+    text-align: center
+    width 2vw
+    font-family: Jura;
+    font-size: 2.4vh;
+    font-weight: 500;
+.sep_counter
+    height: 80%
+    width 0.02vw
     background: rgba(217, 217, 217, 1)
-    width 36vw
-    height: 5vh
-    margin 2.5vh 0 0 0
-.order_btn
-    background: rgba(217, 217, 217, 1)
-    width 17.2vw
-    height: 8.7vh
-.bot_bot
+.price_section
     margin-top 4vh
     display: flex
-    gap: 1.2vw
-.cart_s_p
-    background: rgba(217, 217, 217, 1)
-    width 12vw
-    height: 8.7vh
-.counter
-    background: rgba(217, 217, 217, 1)
-    width 4vw
-    height: 8.7vh
+    align-items: center
+    gap 1vw
+.sale_price
+    position relative
+    font-family: Jura;
+    font-size: 3.6vh;
+    font-weight: 700;
+.sale_price:after
+    top 2.3vh
+    left 5.75vw
+    content: ""
+    width 2.5vw
+    position: absolute
+    height: 0.1vh
+    background: rgba(113, 113, 113, 1)
+.price_no_sale
+    font-family: Jura;
+    font-size: 2vh;
+    font-weight: 400;
+    color rgba(113, 113, 113, 1)
+
+.order_btn
+    background: rgba(133, 212, 169, 1)
+    width 12.3vw
+    height: 7.7vh
+    border-radius: 0.5vh
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: Jura;
+    font-size: 2vh;
+    font-weight: 400;
+
+
 .about_heading
-    background: rgba(217, 217, 217, 1)
+    user-select: none
+    overflow: hidden
+    border-radius: 0.5vh
+    background: rgba(229, 252, 240, 1)
     width 38.8vw
     height: 9vh
-    margin-top 7vh
-.smth_3
-    background: rgba(195, 195, 195, 1)
-    height: 9vh
-    width 9.6vw
+    margin 7vh 0 0 9.9vw
+    display: flex
+    justify-content: space-between
+    align-items: center
+.about_heading span
+    cursor: pointer
+    font-family: Jura;
+    font-size: 2.2vh;
+    font-weight: 500;
+    height: 100%
+    width 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 0.5vh
+    transition 0.3s ease
+.about_heading span:hover
+    background: rgba(133, 212, 169, 1)
 .about_section
-    margin-top 6vh
+    margin 6vh 0 0 15.6vw
+    width 60vw
+.about_re
+    font-family: Jura;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+
+.prop_block
+    padding: 5.8vh 0 5.8vh 0
+    box-sizing: border-box
+    margin-top 8.3vh
+
+    background: rgba(133, 212, 169, 1)
+
+.prop_block span
+    width 100%
     display: flex
-    flex-direction: column
     justify-content: center
     align-items: center
-    gap 2.5vh
-    width 100%
-.about
-    background: rgba(194, 194, 194, 1)
-    width 80vw
-    height: 5vh
-.n_block
-    margin-top 6vh
+    font-family: Jura;
+    font-size: 2.4vh;
+    font-weight: 700;
+.card_con
+    margin 3vh 0 0 0
     display: flex
-    flex-direction: column
-    width 100%
     justify-content: center
     align-items: center
-    gap 2.5vh
+    gap 3vw
+
 .n
     background: rgba(217, 217, 217, 1)
     width 55vw

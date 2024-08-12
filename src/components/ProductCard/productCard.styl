@@ -7,6 +7,7 @@
     position: relative;
     padding: 1.2vh 1.2vh
     box-sizing: border-box
+    text-decoration: none
 }
 
 .card:hover {
@@ -23,12 +24,14 @@
     margin-top 3vh
     display: flex
     justify-content: center
+.img_con img
+    width 68%
 .product___name
+    color black
     margin-top 2vh
     font-family: Jura;
-    font-size: 20px;
+    font-size: 2.2vh;
     font-weight: 400;
-    text-align: left;
 .bot_con
     display: flex
     justify-content: space-between
@@ -37,9 +40,8 @@
 .sale
     position relative
     font-family: Jura;
-    font-size: 20px;
+    font-size: 2.2vh;
     font-weight: 400;
-    line-height: 23.66px;
     color rgba(113, 113, 113, 1)
 .sale:after
     top 1.4vh
@@ -51,9 +53,8 @@
     background: rgba(113, 113, 113, 1)
 .price
     font-family: Jura;
-    font-size: 24px;
+    font-size: 2.8vh;
     font-weight: 500;
-    line-height: 28.39px;
     color rgba(0, 0, 0, 1)
 .card:hover .price_con {
     display: flex;
@@ -80,15 +81,24 @@
     overflow: hidden
 .p_counter div
     font-family: Jura;
-    font-size: 24px;
+    font-size: 2.8vh;
     font-weight: 500;
-    line-height: 28.39px;
     text-align: center;
+    color black
+
 .minus
+    user-select: none
     cursor pointer
+    color black
+
 .plus
+    user-select: none
+    color black
+
     cursor pointer
 .cart_btn
+    user-select: none
+    cursor: pointer
     background: rgba(133, 212, 169, 1)
     width 100%
     height: 100%
@@ -96,10 +106,9 @@
     align-items: center
     justify-content: center
     font-family: Jura;
-    font-size: 20px;
+    font-size: 2.2vh;
     font-weight: 400;
-    line-height: 23.66px;
-    text-align: center;
+    color black
 .card:hover .bot_con
     flex-direction: column
 .card:hover .add_to_cart

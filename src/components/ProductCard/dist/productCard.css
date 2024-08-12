@@ -7,6 +7,7 @@
   position: relative;
   padding: 1.2vh 1.2vh;
   box-sizing: border-box;
+  text-decoration: none;
 }
 .card:hover {
   box-shadow: 0 0.4vh 2vh rgba(0,0,0,0.25);
@@ -23,12 +24,15 @@
   display: flex;
   justify-content: center;
 }
+.img_con img {
+  width: 68%;
+}
 .product___name {
+  color: #000;
   margin-top: 2vh;
   font-family: Jura;
-  font-size: 20px;
+  font-size: 2.2vh;
   font-weight: 400;
-  text-align: left;
 }
 .bot_con {
   display: flex;
@@ -38,9 +42,8 @@
 .sale {
   position: relative;
   font-family: Jura;
-  font-size: 20px;
+  font-size: 2.2vh;
   font-weight: 400;
-  line-height: 23.66px;
   color: #717171;
 }
 .sale:after {
@@ -54,9 +57,8 @@
 }
 .price {
   font-family: Jura;
-  font-size: 24px;
+  font-size: 2.8vh;
   font-weight: 500;
-  line-height: 28.39px;
   color: #000;
 }
 .card:hover .price_con {
@@ -87,18 +89,24 @@
 }
 .p_counter div {
   font-family: Jura;
-  font-size: 24px;
+  font-size: 2.8vh;
   font-weight: 500;
-  line-height: 28.39px;
   text-align: center;
+  color: #000;
 }
 .minus {
+  user-select: none;
   cursor: pointer;
+  color: #000;
 }
 .plus {
+  user-select: none;
+  color: #000;
   cursor: pointer;
 }
 .cart_btn {
+  user-select: none;
+  cursor: pointer;
   background: #85d4a9;
   width: 100%;
   height: 100%;
@@ -106,10 +114,9 @@
   align-items: center;
   justify-content: center;
   font-family: Jura;
-  font-size: 20px;
+  font-size: 2.2vh;
   font-weight: 400;
-  line-height: 23.66px;
-  text-align: center;
+  color: #000;
 }
 .card:hover .bot_con {
   flex-direction: column;

@@ -1,0 +1,83 @@
+.sign_in_p {
+  width: 100vw;
+  height: 77vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f3;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23vw;
+  height: 51vh;
+  background: #fff;
+  border-radius: 1vh;
+}
+.form_heading {
+  margin-top: 5vh;
+  font-family: Jura;
+  font-size: 2.4vh;
+  font-weight: 500;
+}
+.error {
+  opacity: 0;
+  font-family: Jura;
+  font-size: 1.4vh;
+  font-weight: 700;
+  color: #d48585;
+}
+.form input {
+  margin-top: 1.5vh;
+  border: none;
+  box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.308);
+  border-radius: 1vh;
+  height: 5vh;
+  width: 15vw;
+  outline: none;
+  padding-left: 1vw;
+  box-sizing: border-box;
+  font-family: Jura;
+  font-size: 1.5vh;
+  font-weight: 700;
+}
+.sign_in_btn {
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #85d4a9;
+  border-radius: 1vh;
+  width: 15vw;
+  height: 6vh;
+  border: none;
+  outline: none;
+  margin-top: 3vh;
+  cursor: pointer;
+}
+.sing_in_sep_line {
+  width: 15vw;
+  height: 0.1vh;
+  background: #000;
+  margin-top: 3vh;
+}
+.for_pass {
+  margin-top: 1vh;
+  cursor: pointer;
+  font-family: Jura;
+  font-size: 1.5vh;
+  font-weight: 700;
+  color: #85d4a9;
+}
+.sign_up_btn {
+  margin-top: 1vh;
+  color: #000;
+  cursor: pointer;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 400;
+  text-decoration: underline;
+}
