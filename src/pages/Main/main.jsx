@@ -30,9 +30,11 @@ export function Main() {
                     {isLoading ? (
                         <p>Loading...</p>
                     ) : data.products.length ? (
-                        data.products.map(product => (
-                            <ProductCard key={product.id} product={product} />
-                        ))
+                        data.products
+                            .filter(product => product.display) // Фільтруємо продукти
+                            .map(product => (
+                                <ProductCard key={product.id} product={product} />
+                            ))
                     ) : (
                         <p>No products available.</p>
                     )}

@@ -93,6 +93,8 @@
   font-weight: 700;
 }
 .make_an_order {
+  text-decoration: none;
+  color: #000;
   cursor: pointer;
   background: #85d4a9;
   display: flex;

@@ -13,7 +13,10 @@ export function ProductCard(props) {
         e.preventDefault()
 
         const productWithCounter = {
-            ...props.product,
+            id: props.product._id, // Ensure this is the correct ID property
+            name: props.product.name,
+            price: props.product.price,
+            article: props.product.article,
             counter: counter
         };
         dispatch(addToCart(productWithCounter));

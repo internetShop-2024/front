@@ -7,6 +7,8 @@ import { useEffect } from "react";
 
 export function CartPage(){
 
+
+    const token = localStorage.getItem('token');
     const myCart = localStorage.getItem('cart');
     const objCart = myCart ? JSON.parse(myCart) : { cart: [] }; // Provide a default value if myCart is null
 
@@ -18,9 +20,13 @@ export function CartPage(){
         <div className="cart_page">
             <div className="cart_pp">
                 <div className="cart_left_part">
-                    <div className="info_con">
-                        <span className="warning">Увага!</span> Щоб бачити свої замовлення в особистому кабінеті, обов'язково <NavLink to='/sign-in'>авторизуйтесь</NavLink>  або <NavLink to='/sign-up'>зареєструйтесь</NavLink> перед оформленням замовлення!
-                    </div>
+                    {
+                        !token && ( // Only render if the token is not present
+                            <div className="info_con">
+                                <span className="warning">Увага!</span> Щоб бачити свої замовлення в особистому кабінеті, обов'язково <NavLink to='/sign-in'>авторизуйтесь</NavLink>  або <NavLink to='/sign-up'>зареєструйтесь</NavLink> перед оформленням замовлення!
+                            </div>
+                        )
+                    }
                     <div className="contact_info">
                         <span className="info_heading">Контактна інформація:</span>
                         <input type="text" placeholder="ПІБ"/>

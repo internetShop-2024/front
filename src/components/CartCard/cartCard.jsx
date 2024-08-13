@@ -46,7 +46,7 @@ export function CartCard(props){
             <img className="cart_card_img" src="./img/image 7.png" alt="" />
             <div className="item_name">
                 <p className="i_name">{props.product.name}</p> 
-                <p className="i_articul">Артикул 1231</p>            
+                <p className="i_articul">Артикул {props.product.article}</p>            
 
             </div>
             <div className="p_c_counter">

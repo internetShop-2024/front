@@ -4,9 +4,20 @@ import "./dist/singleProduct.css"
 import { Footer } from "../../components/Footer/footer";
 import { ProductCard } from "../../components/ProductCard/productCard";
 
+import { useParams } from "react-router-dom";
+
+import { useGetProductQuery } from "../../store/productApi";
+
 
 export function SingleProduct(){
+    const {id} = useParams()
 
+
+    const {data, error, isLoading, refetch} = useGetProductQuery(id, {skip: false})
+
+
+    console.log(data)
+ 
     const [fav, setFav] = useState('./img/Star 1.svg')
     const [isFav, setIsFav] = useState(false)
     const [counter, setCounter] = useState(1)
@@ -109,8 +120,8 @@ export function SingleProduct(){
                     </div>
                     <div className="product_info">
                         <div className="top_descr">
-                            <div className="product_article">Артикул: ytye678</div>
-                            <div className="product_name">Насіння Горох Овочевий Телефон Seedera, 20г</div>
+                            <div className="product_article">Артикул: {data?.product.article}</div>
+                            <div className="product_name">{data?.product.name}</div>
                             <div onClick={satFav} className="add_to_favorite">
                                 <img className="star" src={fav} alt="" />
                                 <span>Додати до обраного</span>
@@ -124,8 +135,7 @@ export function SingleProduct(){
                                 <span onClick={addCount} className="counter_control">+</span>
                             </div>
                             <div className="price_section">
-                                <span className="sale_price">6 грн</span>
-                                <span className="price_no_sale">8 грн</span>
+                                <span className="sale_price">{data?.product.price} грн</span>
 
                             </div>
 
@@ -144,9 +154,7 @@ export function SingleProduct(){
                 </div>
                 <div className="about_section">
                     <span className="about_re">
-                        Користь зеленого горошка для організму колосальна, його плоди багаті білками, вітамінами, мінералами та іншими корисними речовинами, що сприяють відверненню багатьох захворювань. Сахарний сорт гороха. Телефон володіє чудовими харчовими властивостями, сучасністю плодів і високою врожайністю.
-                        Зовнішній вид
-                        Все знают и узнают горох на грядках. Це високі тонкі стеблі, на яких розташовано близько 10 стручков. Стручки довжиною 9—12 см містять у собі приблизно 9 горошин.
+                        {data?.product.description}
                     </span>
                 </div>
                 <div className="prop_block">

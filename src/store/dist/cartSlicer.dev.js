@@ -52,6 +52,7 @@ var cartSlice = (0, _toolkit.createSlice)({
           id: action.payload.id,
           name: action.payload.name,
           price: action.payload.price,
+          article: action.payload.article,
           counter: action.payload.counter
         });
       }
