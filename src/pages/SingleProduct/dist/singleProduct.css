@@ -183,8 +183,12 @@
   background: #85d4a9;
 }
 .about_section {
-  margin: 6vh 0 0 15.6vw;
-  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 5vh 13vw;
+  box-sizing: border-box;
 }
 .about_re {
   font-family: Jura;
@@ -219,4 +223,74 @@
   background: #d9d9d9;
   width: 55vw;
   height: 25vh;
+}
+.review_block {
+  width: 45vw;
+}
+.review_window {
+  width: 100%;
+  height: 100%;
+  padding: 1vh 1vw;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 1vh;
+}
+.review_form {
+  margin-top: 3vh;
+  padding: 2vh 1.3vw 3vh 1.3vw;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 1vh;
+}
+.review_form span {
+  font-family: Jura;
+  font-size: 2.6vh;
+  font-weight: 500;
+}
+.review_form input {
+  display: block;
+  margin-top: 1.5vh;
+  border: none;
+  box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.308);
+  border-radius: 1vh;
+  height: 5vh;
+  width: 100%;
+  outline: none;
+  padding-left: 1vw;
+  box-sizing: border-box;
+  font-family: Jura;
+  font-size: 1.5vh;
+  font-weight: 700;
+}
+.review_form textarea {
+  margin-top: 1.5vh;
+  border: none;
+  box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.308);
+  border-radius: 1vh;
+  height: 13vh;
+  width: 100%;
+  outline: none;
+  padding: 1vh 1vw 1vh 1vw;
+  box-sizing: border-box;
+  font-family: Jura;
+  font-size: 1.5vh;
+  font-weight: 700;
+  resize: none;
+}
+.review_block .review_btn {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 400;
+  background: #85d4a9;
+  height: 6vh;
+  width: 10vw;
+  border-radius: 1vh;
+  margin-top: 3vh;
 }

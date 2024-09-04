@@ -1,8 +1,8 @@
 .catalog_card {
   cursor: pointer;
   user-select: none;
-  width: 573px;
-  height: 441px;
+  width: 29.8vw;
+  height: 48vh;
   border-radius: 1vh;
   background: #fff;
   display: flex;
@@ -17,4 +17,7 @@
   font-size: 4vh;
   font-weight: 700;
   margin: 0;
+}
+.catalog_card img {
+  width: 15vw;
 }

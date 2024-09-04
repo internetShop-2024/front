@@ -8,7 +8,10 @@ const translations = {
     home: "ГОЛОВНА",
     catalog: "КАТАЛОГ",
     plants_protecting_tools: "ЗАСОБИ ЗАХИСТУ РОСЛИН",
-    cart: "КОРЗИНА"
+    cart: "КОРЗИНА",
+    about: "ПРО НАС",
+    contacts: 'КОНТАКТИ',
+    payment: 'ОПЛАТА ТА ДОСТАВКА'
 };
 
 const translatePath = (path) => {
@@ -20,7 +23,7 @@ export function Breadcrumbs() {
     const pathnames = location.pathname.split('/').filter(x => x);
 
 
-    if (location.pathname === "/" || location.pathname === '/sign-in'|| location.pathname === '/sign-up') {
+    if (location.pathname === "/" || location.pathname === '/sign-in'|| location.pathname === '/sign-up' || location.pathname === '/profile') {
         return null;
     }
 

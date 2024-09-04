@@ -3,17 +3,17 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.useGetProductQuery = exports.useGetProductsQuery = exports.productApi = void 0;
+exports.useGetByPriceQuery = exports.useSetReviewMutation = exports.useGetProductQuery = exports.useGetProductsQuery = exports.productApi = void 0;
 
 var _react = require("@reduxjs/toolkit/query/react");
 
 var productApi = (0, _react.createApi)({
   reducerPath: 'productApi',
   baseQuery: (0, _react.fetchBaseQuery)({
-    baseUrl: 'http://46.149.190.25:5000/',
+    baseUrl: 'http://25.40.19.167:8080/',
     prepareHeaders: function prepareHeaders(headers) {
-      var authToken = "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFmMzExNmJkNTBmNjBhMGU5Nzg3ZjQiLCJ1c2VybmFtZSI6IkFkYXNkIiwiX192IjowLCJjYWxscyI6W3siY3JlYXRlZEF0IjoiMjAyNC0wOC0wN1QxMDoxODo1OS41NzBaIn0seyJjcmVhdGVkQXQiOiIyMDI0LTA4LTA3VDEwOjE5OjA3LjY0OFoifSx7ImNyZWF0ZWRBdCI6IjIwMjQtMDgtMDdUMTA6MTk6NDQuODkwWiJ9XSwiaWF0IjoxNzIzMTM3MjM3LCJleHAiOjE3MjMyMjM2Mzd9.27rxlX6uEEbY5K-Elgv9GQPTtzvV2lnIogEhL-RGdak; Path=/; HttpOnly; Secure";
-      headers.set('Authorization', "".concat(authToken));
+      var token = localStorage.getItem('token');
+      headers.set('Authorization', "".concat(token));
       headers.set('Content-Type', 'application/json');
       return headers;
     }
@@ -32,12 +32,33 @@ var productApi = (0, _react.createApi)({
             method: "GET"
           };
         }
+      }),
+      setReview: build.mutation({
+        query: function query(body) {
+          return {
+            url: "reviews?id=".concat(body.id),
+            method: 'POST',
+            body: body
+          };
+        }
+      }),
+      getByPrice: build.query({
+        query: function query(min, max) {
+          return {
+            url: "products/?price=".concat(min, ", ").concat(max),
+            method: "GET"
+          };
+        }
       })
     };
   }
 });
 exports.productApi = productApi;
 var useGetProductsQuery = productApi.useGetProductsQuery,
-    useGetProductQuery = productApi.useGetProductQuery;
+    useGetProductQuery = productApi.useGetProductQuery,
+    useSetReviewMutation = productApi.useSetReviewMutation,
+    useGetByPriceQuery = productApi.useGetByPriceQuery;
+exports.useGetByPriceQuery = useGetByPriceQuery;
+exports.useSetReviewMutation = useSetReviewMutation;
 exports.useGetProductQuery = useGetProductQuery;
 exports.useGetProductsQuery = useGetProductsQuery;

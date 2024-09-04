@@ -1,0 +1,32 @@
+.review {
+  position: relative;
+  background: #fff;
+  border-radius: 1vh;
+  margin-top: 5vh;
+  padding: 3vh 1vw;
+}
+.review_name {
+  margin: 0 0 1vh 0;
+  display: block;
+  font-family: Jura;
+  font-size: 2vh;
+  font-weight: 700;
+}
+.review_text {
+  display: block;
+  font-family: Jura;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: left;
+}
+.review_date {
+  position: absolute;
+  right: 1vw;
+  top: 3vh;
+  color: #b3b3b3;
+  font-size: 1.5vh;
+  display: block;
+  font-family: Jura;
+  font-weight: 700;
+}

@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const userApi = createApi({
     reducerPath: 'userApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://46.149.190.25:5000/users/'
+        baseUrl: 'https://superogshmal.pp.ua/users/'
     }),
 
     endpoints: (build) => ({
@@ -14,9 +14,18 @@ export const userApi = createApi({
                 method: 'POST',
                 body
             })
+        }),
+
+        registarion: build.mutation({
+            query: (body) => ({
+                url: 'register',
+                method: 'POST',
+                body
+            })
         })
+
     })
 })
 
 
-export const {useAuthorizationMutation} = userApi
+export const {useAuthorizationMutation, useRegistarionMutation} = userApi

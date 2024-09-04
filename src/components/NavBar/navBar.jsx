@@ -9,11 +9,6 @@ export function NavBar() {
     const myCart = localStorage.getItem('cart');
     const objCart = JSON.parse(myCart);
 
-    useEffect(() => {
-        if (objCart?.cart) {
-            console.log(objCart.cart);
-        }
-    }, [objCart]);
 
     function openCart() {
         document.getElementById("cart_component").style.display = "flex";
@@ -28,11 +23,11 @@ export function NavBar() {
         <div className="nav_bar">
             <div className="top_nav">
                 <div className="left_nav">
-                    <NavLink to="/"><img className="logo" src="./img/logo.png" alt="" /></NavLink>
-                    <div className="link">про нас</div>
-                    <div className="link">оплата та доставка</div>
+                    <NavLink activeClassName="selected" to={"/"}><img className="logo" src="./img/logo.png" alt="" /></NavLink>
+                    <NavLink activeClassName="selected" to={"/about"} className="link">про нас</NavLink>
+                    <NavLink activeClassName="selected" to={"/payment"} className="link">оплата та доставка</NavLink>
                     <div className="link">акції</div>
-                    <div className="link">контакти</div>
+                    <NavLink activeClassName="selected" to={"/contacts"} className="link">контакти</NavLink>
                     <div className="link">блог</div>
                     <div className="link">новини</div>
                 </div>

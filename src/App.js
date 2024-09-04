@@ -9,6 +9,10 @@ import Products from './pages/Products/products';
 import { SignInPage } from './pages/Sing-in/sign-in';
 import { SignUpPage } from './pages/Sign-up/sign-up';
 import { CartPage } from './pages/Cart/cartPage';
+import { Profile } from './pages/Profile/profile';
+import { About } from './pages/About/about';
+import { Contacts } from './pages/Contacts/contacts';
+import { Payment } from './pages/Payment/payment';
 
 
 
@@ -38,6 +42,10 @@ function App() {
           <Route path='/sign-in' element={<SignInPage/>}/>
           <Route path='/sign-up' element={<SignUpPage/>}/>
           <Route path='/cart' element ={<CartPage/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/contacts' element={<Contacts/>}/>
+          <Route path='/payment' element={<Payment/>}/>
         </Routes>
       </Router>
       

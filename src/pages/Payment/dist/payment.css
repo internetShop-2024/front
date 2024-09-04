@@ -1,0 +1,6 @@
+.payment_page {
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

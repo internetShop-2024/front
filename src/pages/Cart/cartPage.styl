@@ -191,6 +191,7 @@
     flex-direction: column
     padding: 0 1.4vw
     box-sizing: border-box
+    justify-content: center
 .shiping_btn
     user-select: none
     cursor: pointer
@@ -213,3 +214,46 @@
     font-family: Jura;
     font-size: 2.4vh;
     font-weight: 700;
+.radio-buttons_c
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+.checkBox {
+  display: block;
+  cursor: pointer;
+  width: 2vh;
+  height: 2vh;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 0.5vh
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px #aaa;
+}
+
+.checkBox div {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(40, 208, 117, 1);
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+}
+
+.checkBox input[type=checkbox]:checked + div {
+  left: -10px;
+  top: -10px;
+}
+
+.checkBox input[type=checkbox] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+
+.transition {
+  transition: 300ms ease;
+}
