@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const orderApi = createApi({
     reducerPath: 'orderApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://25.40.19.167:8080/'
+        baseUrl: 'https://superogshmal.pp.ua/orders/'
     }),
 
     endpoints:(build) => ({

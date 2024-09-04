@@ -10,7 +10,7 @@ var _react = require("@reduxjs/toolkit/query/react");
 var orderApi = (0, _react.createApi)({
   reducerPath: 'orderApi',
   baseQuery: (0, _react.fetchBaseQuery)({
-    baseUrl: 'http://25.40.19.167:8080/'
+    baseUrl: 'https://superogshmal.pp.ua/orders/'
   }),
   endpoints: function endpoints(build) {
     return {

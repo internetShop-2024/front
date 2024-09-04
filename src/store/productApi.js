@@ -7,7 +7,7 @@ export const productApi = createApi({
 
     reducerPath: 'productApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://25.40.19.167:8080/',
+        baseUrl: 'https://superogshmal.pp.ua/',
         prepareHeaders: (headers) => {
             const token = localStorage.getItem('token');
             headers.set('Authorization', `${token}`);

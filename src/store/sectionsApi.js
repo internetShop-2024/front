@@ -5,7 +5,7 @@ export const sectionsApi = createApi({
 
     reducerPath: 'sectionsApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://25.40.19.167:8080/',
+        baseUrl: 'https://superogshmal.pp.ua/',
     }),
 
     endpoints:(build) => ({
